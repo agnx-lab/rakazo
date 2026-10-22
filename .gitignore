@@ -46,3 +46,7 @@ apps/web/src/locales/**/*.mjs
 apps/web/src/locales/**/*.js
 apps/web/scripts/msgids.json
 playwright-report-www
+
+# Agnx 子应用胶水产物必须入库（上游 dist 规则误伤）
+!.agnx/dist/
+!.agnx/dist/**
