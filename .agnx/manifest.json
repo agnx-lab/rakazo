@@ -1,0 +1,48 @@
+{
+  "id": "rakazo",
+  "name": "Rakazo",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：elie222/rakazo 整仓 + 上游 web(Vite 预览) 主界面嵌入，独占端口 8121",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./.agnx/assets/rakazo-icon.png",
+  "iconDark": "./.agnx/assets/rakazo-icon-dark.png",
+  "platforms": {
+    "desktop": "supported",
+    "web": "supported",
+    "mobile": "partial"
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "none",
+    "capabilities": [
+      "cookies",
+      "websocket"
+    ],
+    "preferStrategy": "auto"
+  },
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-rakazo.mjs",
+    "stateFile": "rakazo.json",
+    "defaultPort": 8121,
+    "lifecycle": "lazy",
+    "label": "Rakazo 服务"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "rakazo.open",
+        "title": "Rakazo"
+      }
+    ],
+    "panels": [
+      {
+        "id": "rakazo.main",
+        "title": "Rakazo"
+      }
+    ]
+  }
+}

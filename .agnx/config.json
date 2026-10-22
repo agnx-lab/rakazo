@@ -1,0 +1,10 @@
+{
+  "appId": "rakazo",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/elie222/rakazo"
+  },
+  "updatedAt": "2026-10-19T20:54:19.471Z"
+}
